@@ -1,0 +1,106 @@
+.footer-bg{
+	background: url(../img/content-bg.png) repeat;
+	color: #a5a5a5;
+	font-family: @footer-ff;
+	font-size: @otherText;
+	padding: 68px 0 45px 0;
+	.name{
+		color: #fff;
+		text-transform: uppercase;
+	}
+	.wrapper{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.recent, .about, .social{
+		.col-4();
+		.col-md-6();
+		.col-sm-12();
+		p{
+			margin-bottom: 22px;
+		}
+		&-item{
+			padding: 12px 0 20px 0;
+			border-bottom: 1px solid #3b3b3b;
+			&:last-child{
+				border: none;
+			}
+		}
+	}
+	.recent{
+		p+div{
+			padding-top: 0;
+		}
+	}
+	.social{
+		display: block;
+		a{
+			span{
+				display: inline-block;
+			}
+		margin: 1px;
+		}
+		.rss{
+			.sprite(@rss);
+		}
+		.facebook{
+			.sprite(@facebook);
+		}
+		.twitter{
+			.sprite(@twitter);
+		}
+		.email{
+			.sprite(@email);
+		}
+		.tumblr{
+			.sprite(@tumblr);
+		}
+		.path{
+			.sprite(@path);
+		}
+		.vimeo{
+			.sprite(@vimeo);
+		}
+		.zerply{
+			.sprite(@zerply);
+		}
+		.picasa{
+			.sprite(@picasa);
+		}
+		.stumble-upon{
+			.sprite(@stumble-upon);
+		}
+		.skype{
+			.sprite(@skype);
+		}
+		.reddit{
+			.sprite(@reddit);
+		}
+		.evernote{
+			.sprite(@evernote);
+		}
+		.behance{
+			.sprite(@behance);
+		}
+		.dribbble{
+			.sprite(@dribbble);
+		}
+		.digg{
+			.sprite(@digg);
+		}
+		.blogger{
+			.sprite(@blogger);
+		}
+		.flickr{
+			.sprite(@flickr);
+		}
+		.linkedin{
+			.sprite(@linkedin);
+		}
+		.google{
+			.sprite(@google);
+		}
+		
+	}
+}
