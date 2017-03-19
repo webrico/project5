@@ -10,6 +10,8 @@ var lessAutoPrefix = require('less-plugin-autoprefix');
 var lessCleanCss = require('less-plugin-clean-css');
 var autoprefixPlugin = new lessAutoPrefix({browsers: ["last 2 versions"]});
 var cleanCssPlugin = new lessCleanCss({sourceMaps: true});
+var gcmq = require('gulp-group-css-media-queries');
+var smartgrid = require('smart-grid');
 
 
 
@@ -46,6 +48,7 @@ gulp.task('css', function(){
 		.pipe(less({
 			plugins: [autoprefixPlugin]
 		}))
+		.pipe(gcmq())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('build/css/'))
 		.pipe(connect.reload());
@@ -68,3 +71,47 @@ gulp.task('default', function(){
 		gulp.start('html');
 	});
 });
+
+
+//start smart-grid
+ 
+/* It's principal settings in smart grid project */
+var settings = {
+    outputStyle: 'less', /* less || scss || sass || styl */
+    columns: 12, /* number of grid columns */
+    offset: "10px", /* gutter width px || % */
+    container: {
+        maxWidth: '960px', /* max-width оn very large screen */
+        fields: '10px' /* side fields */
+    },
+    breakPoints: {
+        lg: {
+            'width': '960px', /* -> @media (max-width: 1100px) */
+            'fields': '10px' /* side fields */
+        },
+        md: {
+            'width': '780px',
+            'fields': '10px'
+        },
+        sm: {
+            'width': '560px',
+            'fields': '10px'
+        },
+        // xs: {
+        //     'width': '560px',
+        //     'fields': '10px'
+        // }
+        /* 
+        We can create any quantity of break points.
+ 
+        some_name: {
+            some_width: 'Npx',
+            some_offset: 'N(px|%)'
+        }
+        */
+    }
+};
+ 
+smartgrid('./dev/less/import', settings);
+
+//end smart-grid

@@ -1,5 +1,5 @@
 {
-  "name": "newHouse_project",
+  "name": "5",
   "version": "0.0.1",
   "author": "RICO",
   "description": "introduction to gulp",
@@ -8,6 +8,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
+    "gulp-group-css-media-queries": "^1.2.0",
     "gulp-htmlincluder": "^0.1.0",
     "gulp-less": "^3.3.0",
     "gulp-livereload": "^3.8.1",
@@ -16,5 +17,8 @@
     "gulp.spritesmith": "^6.3.0",
     "less-plugin-autoprefix": "^1.5.1",
     "less-plugin-clean-css": "^1.5.1"
+  },
+  "dependencies": {
+    "smart-grid": "^1.0.0"
   }
 }

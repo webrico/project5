@@ -1,46 +1,72 @@
-.nav{
-	color: #fff;
-	background-color: #373c3f;
-	position: relative;
-	height: 37px;
-		@media screen and (min-width: @phone-width) {
-		height: 75px;
-	}
-	p{
-		padding: 10px 0 0 19px;
-			@media screen and (min-width: @phone-width) {
-			padding: 23px 0 0 35px;
-			font-size: 1.5rem;
-		}
-	}
-	&-menu{
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 40px;
-		height: 100%;
-		background-color: #202529;
-			@media screen and (min-width: @phone-width){
-				width: 82px;
-			}
-		.menu-button{
-			margin: 0 auto;
-			background-color: #fff;
-			width: 16px;
-			height: 2px;
-			margin-bottom: 2px;
-				@media screen and (min-width: @phone-width){
-					width: 31px;
-					height: 4px;
-					margin-bottom: 4px;
-				}
+.header-top{
+	height: 47px;
+	background: url(../img/content-bg.png) repeat-x top left;
+		.top-social{
+			display: flex;
+			justify-content: flex-end;
 
-			&:first-child{
-				margin-top: 13px;
-				@media screen and (min-width: @phone-width){
-					margin-top: 30px;
+			a{
+				margin: 15px 10px;
+				&:last-child{
+				margin-right: 0px;
+				}
+				span{
+					display: block;
+				}
+			}
+			.twitter{
+				.sprite(@top-twitter);
+			}
+			.facebook{
+				.sprite(@top-facebook);
+			}
+			.dribbble{
+				.sprite(@top-dribbble);
+			}
+			.rss{
+				.sprite(@top-rss);
+			}
+		}
+}
+	.header-menu{
+	height: 56px;
+	background: url(../img/bg.png) repeat top left;
+	position: relative;
+	box-shadow: 0 5px 8px rgba(0 ,0, 0, .75);
+	.wrapper{
+		display: flex;
+		height: 100%;
+		align-items: center;
+	}
+	.logo{
+		.col-2();
+	}
+	nav{
+		.col-4();
+		.offset-left(6);
+		flex-basis: 100%;
+		ul{
+			display: flex;
+			justify-content: flex-end;
+			text-transform: uppercase;
+			font-family: @meny-ff;
+			font-size: @menu;
+			font-weight: 500px;
+			li{
+				&:last-child>a{
+					margin-right: 0px;
+				}
+			}
+			a{
+				margin: 20px 15px;
+				&:hover{
+					color: @activeColor;
 				}
 			}
 		}
 	}
+}
+.header-bg{
+	height: 151px;
+	background: url(../img/header-bg.png) repeat-x top center;
 }

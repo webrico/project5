@@ -1,29 +1,23 @@
-@import 'import/reset';
+// @import 'import/reset';
+.reset();
+@import 'import/smart-grid';
 @import 'import/fonts';
 @import 'import/_setting';
 @import 'import/_mixins';
-body{
- font-family: @regular-fontFamily, sans-serif;
+@import 'import/sprite';
+
+.wrapper{
+	.wrapper();
 }
 
-.container{
-	width: 320px;
-	margin: 0 auto;
-	@media screen and (min-width: @phone-width){
-		width: @phone-width;
-	}
-	@media screen and (min-width: @tablet-width){
-		width: @tablet-width;
-	}
-	@media screen and (min-width: @full-width){
-		width: @full-width;
-	}
+a{
+	color: #000;
+	text-decoration: none;
 }
 
-
-
-
-
+.active{
+	color: @activeColor;
+}
 
 
 @import 'import/header';

@@ -1,28 +1,34 @@
-//задаём ширину размеров экрана
-@full-width: 1024px;
-@tablet-width: 980px;
-@phone-width: 640px;
-@small-width: 320px;
+// //задаём ширину размеров экрана
+// @full-width: 1024px;
+// @tablet-width: 980px;
+// @phone-width: 640px;
+// @small-width: 320px;
 
-@columCount: 12;
-//only horizontal padding!(пробелы между сеткой макетов разных размеров)
-@full-cell-padding: 15px;
-@tablet-cell-padding: 10px;
-@phone-cell-padding: 5px;
+// @columCount: 12;
+// //only horizontal padding!(пробелы между сеткой макетов разных размеров)
+// @full-cell-padding: 15px;
+// @tablet-cell-padding: 10px;
+// @phone-cell-padding: 5px;
 
 //выносим общие цвета в переменную
 // @baseColor: #3e91c9;
 // @secondColor: #2e7cb0;
 // @activeColor: #d43838;
-@whiteColor: #fff;
-@blackColor: #000;
+@whiteColor: #252525;
+@activeColor: #ea5a4b;
 
 //fonts(смотрим какие шрифты используются в макете)
-// dinpro-regular
+// HelveticaNeue Medium
+// HelveticaNeue Bold
+// Bitter Regular
+// Bitter Bold
 // 
 
 //подключаем их
-@regular-fontFamily: 'regular';
+@meny-ff: 'HelvetNuel-M';
+@contentName-ff: 'Bitter-B';
+@content-ff: 'Bitter-R';
+@footer-ff: 'HelvetNuel-B';
 
 //fonts-size(смотрим размеры шрифтов)
 // large|medium|phone(табличка для разных размеров экрана)
@@ -38,14 +44,10 @@
 // 16 18 18 ->content
 
 //подключаем размеры шрифтов
-@companyName: 60px;
-@companySlogan: 36px;
-@companyDescr: 24px;
+@companyName: 1.5rem;
+@menu: .75rem;
+@contentName: 1.875rem;
 
-@button-fontSize: 18px;
-@header-font-size: 48px;
-
-@catalog-fontSize: 24px;
-@catalogSubTitle-fontsize: 16px;
+@otherText: .875rem;
 
 @patchToIcon: "../img/";
