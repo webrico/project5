@@ -49,7 +49,7 @@
 		flex-basis: 100%;
 		ul{
 			display: flex;
-			justify-content: flex-end;
+			justify-content: space-between;
 			text-transform: uppercase;
 			font-family: @meny-ff;
 			font-size: @menu;
@@ -58,6 +58,8 @@
 			letter-spacing: .4px;
 			.col-4();
 			.offset-left(8);
+			.col-md-6();
+			.offset-left-md(6);
 			.col-sm-9();
 			.offset-left-sm(3);
 			li{
@@ -66,7 +68,8 @@
 				}
 			}
 			a{
-				margin: 20px 13px;
+				display: flex;
+				flex-shrink: 0;
 				&:hover{
 					color: @activeColor;
 				}
@@ -77,5 +80,5 @@
 .header-bg{
 	height: 151px;
 	background: url(../img/header-bg.png) no-repeat top center;
-	background-size: 100%;
+	background-size: cover;
 }
