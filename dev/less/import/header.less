@@ -75,6 +75,76 @@
 				}
 			}
 		}
+		@media screen and (max-width: 370px) {
+			position: relative;
+			top: 0;
+			left: 0;
+			.sm_menu_nav{
+				display: block; 
+				position: absolute;
+				top: -17px;
+				left: 85%;
+				right: 0;
+				bottom: 0;
+				color: #fff;
+				height: 30px;
+				width: 30px;
+				background-color: @activeColor;
+				.burger{
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					margin: auto;
+					width: 15px;
+					height: 2px;
+					background-color: #fff;
+					cursor: pointer;
+					&:before, &:after{
+						content: '';
+						display: block;
+						width: 15px;
+						height: 2px;
+						background-color: #fff;
+						position: absolute;
+						transition: .4s;
+					}
+					&:before{
+						top: -4px;
+					}
+					&:after{
+						top: 4px;
+					}
+					&.open{
+						background-color: transparent;
+						&:before{
+							top: 0;
+							transform: rotateZ(45deg);
+						}
+						&:after{
+							top: 0;
+							transform: rotateZ(-45deg);
+						}
+					}
+				}
+			}
+			ul{
+				position: absolute;
+				top: 15px;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				display: none;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-around;
+				height: 100px;
+				background-color: rgba(255, 255, 255, .7);
+				border-radius: 30px;
+				border: 1px solid @activeColor;
+			}
+		}
 	}
 }
 .header-bg{
@@ -82,3 +152,5 @@
 	background: url(../img/header-bg.png) no-repeat top center;
 	background-size: cover;
 }
+
+
